@@ -1,2 +1,2 @@
 # V-CHAT-APP
-A simple chat application project.
+V-CHAT APP - simple chat web application
