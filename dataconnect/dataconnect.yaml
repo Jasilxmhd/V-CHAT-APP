@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "V-CHAT-APP-main"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "V-CHAT-APP-main-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]
