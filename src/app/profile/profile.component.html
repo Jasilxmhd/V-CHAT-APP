@@ -1,0 +1,10 @@
+<div class="profile-container">
+    <h2>{{ userData?.name }}'s Profile</h2>
+    
+    <!-- Display the profile picture if it exists -->
+    <img *ngIf="profilePic" [src]="profilePic" alt="Profile Picture" class="profile-pic">
+    
+    <!-- File input to upload a new profile picture -->
+    <input type="file" (change)="onFileChange($event)" />
+  </div>
+  

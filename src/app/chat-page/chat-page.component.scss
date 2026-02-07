@@ -1,0 +1,133 @@
+/* Global Chat Container */
+.chat-container {
+    width: 100%;
+    height: 80vh; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .chat-header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .chat-header mat-icon {
+    margin-right: 10px;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  
+  .message {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .avatar {
+    margin-right: 10px;
+  }
+  
+  .avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .message-bubble {
+    max-width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e3e3e3;
+    font-size: 14px;
+  }
+  
+  .my-message {
+    background-color: #0078fe;
+    color: white;
+    margin-left: auto;
+  }
+  
+  .message-text {
+    word-wrap: break-word;
+  }
+  
+  .chat-input {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .chat-input mat-icon {
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .chat-input button {
+    background-color: #0078fe;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 10px;
+  }
+  
+
+  /* Style for messages sent by the current user (my-message) */
+.my-message {
+    background-color: #9c40e7; /* Green for the current user */
+    color: white;
+    text-align: right; /* Right-aligned */
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 50%;
+    margin-left: auto;
+  }
+  
+  /* Style for messages sent by the other user (other-message) */
+  .other-message {
+    background-color: #f1f1f1; /* Light gray for the other user */
+    color: black;
+    text-align: left; /* Left-aligned */
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 60%;
+    margin-right: auto;
+  }
+  
+  /* General message styles */
+  .message-bubble {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .message-text {
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+  

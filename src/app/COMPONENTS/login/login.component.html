@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row  align-content-center   full-screen w-100 justify-content-center">
+
+        <div class="col-md-4 shadow border">
+
+            <p class="text-center fw-bold fs-3 mt-4">V-CHAT</p>
+            <p class="text-center fw-bold fs-6">FOR CHAT</p>
+            <div class=" text-center ">
+                <mat-form-field appearance="outline" class="p-2">
+                    <mat-label>Enter email id</mat-label>
+                    <input matInput type="email" required #userName placeholder="Enter your email">
+                    <mat-hint>Enter your Email address</mat-hint>
+
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="p-2">
+                    <mat-label>Enter Password</mat-label>
+                    <input matInput type="password" required #userPassword placeholder="Enter password">
+                    <mat-hint>Enter your Password</mat-hint>
+
+                </mat-form-field>
+            </div>
+
+
+            <!-- ############################################## PASSWORD ################################### -->
+
+            <div *ngIf="this.authService.Errormessage" class="alert alert-danger small ">
+                {{this.authService.Errormessage}}
+            </div>
+
+            <div class="text-center p-3">
+                <button (click)="onLogin(userName.value, userPassword.value)" class="btn btn-primary  col-6"
+                    type="submit">LOGIN
+                </button>
+                <p class="p-2" routerLink="/register">
+                    Not a user?<a class="fw-bold" style="text-decoration: none;">Register Now!</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

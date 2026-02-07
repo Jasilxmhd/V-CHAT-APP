@@ -1,0 +1,124 @@
+// Global Colors & Variables
+$primary-color: #160a5c; // Primary blue color
+$secondary-color: #d1e6fa; // Light gray background
+$error-color: #dc3545; // Red for error messages
+$input-border-color: #2d3236; // Border color for form inputs
+$success-color: #28a745; // Success color for button hover effect
+$background-color: #034f84; // Light background color
+$white: #ecf3f5; // White color for backgrounds
+
+// Font and Spacing Variables
+$font-family: 'Roboto', sans-serif;
+$spacing-base: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+// Container Styling
+.container {
+  background-color: #034f84;
+  padding: 50px 0;
+  min-height: 100vh; // Full screen height
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .registration-form {
+    background-color: $white;
+    border-radius: 12px;
+    padding: $spacing-lg;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 0.5s ease-in-out;
+
+    // Title Styling
+    .fs-5 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $primary-color;
+      margin-bottom: $spacing-base;
+    }
+
+    .fw-bold {
+      font-weight: bold;
+    }
+
+    // Form Fields Styling
+    mat-form-field {
+      width: 100%;
+      margin-bottom: $spacing-base;
+      
+      mat-label {
+        color: $primary-color;
+      }
+
+      input, mat-select {
+        border-radius: 8px;
+        border: 1px solid $input-border-color;
+        padding: $spacing-base;
+        font-size: 1rem;
+        transition: all 0.3s ease-in-out;
+
+        &:focus {
+          border-color: $primary-color;
+          box-shadow: 0 0 5px $primary-color;
+        }
+      }
+    }
+
+    // Button Styling
+    button {
+      width: 100%;
+      padding: $spacing-base;
+      background-color: $primary-color;
+      color: $white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Input Focus Effect Animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Error Message Styling (If any)
+.alert {
+  color: $error-color;
+  background-color: rgba(220, 53, 69, 0.1);
+  border: 1px solid $error-color;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  margin-top: $spacing-lg;
+}
+
+// Responsive Design for Mobile Devices
+@media (max-width: 768px) {
+  .registration-form {
+    padding: $spacing-base;
+    max-width: 90%;
+  }
+
+  .fs-5 {
+    font-size: 1.25rem;
+  }
+}

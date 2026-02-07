@@ -1,0 +1,202 @@
+// Theme Variables
+$primary-bg: #545481; // Dark blue background
+$secondary-bg: #3d215c; // Slightly lighter blue for cards
+$accent-color: #e94560; // Vibrant pink for accents
+$text-color: #ffffff; // White text
+$secondary-text-color: #b1b1b1; // Light gray for secondary text
+$online-color: #4caf50; // Green for online status
+$offline-color: #f44336; // Red for offline status
+$gradient-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+$box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+$border-radius: 12px;
+
+// User Cards
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: $primary-bg;
+  border-radius: $border-radius;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $box-shadow;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%; // Added for better mobile control
+
+    .avatar {
+      width: 45px; // Slightly reduced base size
+      height: 45px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid $accent-color;
+      flex-shrink: 0; // Prevent shrinking on mobile
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .details {
+      flex: 1; // Take remaining space
+      min-width: 0; // Fix text overflow
+
+      .name {
+        font-size: 1rem; // Reduced base size
+        font-weight: bold;
+        color: $text-color;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .email {
+        font-size: 0.85rem; // Reduced base size
+        color: $secondary-text-color;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $offline-color;
+    flex-shrink: 0; // Prevent shrinking
+    margin-left: 10px; // Add space between details and status
+
+    &.online {
+      background: $online-color;
+    }
+  }
+}
+
+// Dashboard and Header Section
+.dashboard-container {
+  padding: 20px;
+  background: $secondary-bg;
+  border-radius: $border-radius;
+}
+
+.header {
+  text-align: center;       // Centers text horizontally
+
+  h1 {
+    font-size: 2rem;
+    color: $text-color;
+    margin-bottom: 10px;
+    
+  }
+
+  p {
+    font-size: 1rem;
+    color: $secondary-text-color;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  
+  .dashboard-container {
+    padding: 15px;
+  }
+
+  .header {
+    h1 {
+      font-size: 1.75rem; // Smaller heading
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+
+  .user-card {
+    padding: 10px;
+    
+    .user-info {
+      gap: 10px; // Reduced gap for mobile
+
+      .avatar {
+        width: 45px; // Kept avatar size the same for mobile
+        height: 45px;
+      }
+
+      .details {
+        .name {
+          font-size: 0.95rem; // Adjusted for mobile
+        }
+
+        .email {
+          font-size: 0.8rem; // Adjusted for mobile
+        }
+      }
+    }
+
+    .status {
+      width: 8px;
+      height: 8px;
+      margin-left: 8px;
+    }
+  }
+
+  .tabs-container {
+    .tab-content {
+      padding: 15px;
+    }
+
+    .mat-tab-label {
+      font-size: 0.9rem !important; // Smaller tab labels
+      color: white !important; // Make tab text white
+    }
+    .mat-tab-label-active {
+      color: white !important; // Ensure active tab text is also white
+      font-weight: bold;
+    }
+    .mat-ink-bar {
+      background-color: $accent-color !important; // Underline color matches accent
+    }
+  }
+}
+
+// Very small screens (optional)
+@media (max-width: 480px) {
+  .user-card {
+    .user-info {
+      .avatar {
+        width: 45px; // Kept avatar size the same
+        height: 45px;
+      }
+
+      .details {
+        .name {
+          font-size: 0.9rem;
+        }
+
+        .email {
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    .status {
+      width: 6px;
+      height: 6px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<div class="dashboard-container">
+  <div class="header">
+    <h1>Welcome to V-CHAT</h1>
+    <p>Connect and chat with your team seamlessly.</p>
+  </div>
+  <mat-tab-group class="tabs-container">
+    <!-- CHAT Tab -->
+    <mat-tab label="CHAT">
+      <div class="tab-content">
+        <mat-list>
+          <mat-list-item *ngFor="let note of usersDataList" (click)="fnChat(note)" class="user-card">
+            <div class="user-info">
+              <div class="avatar">
+                <img src="{{note.profilePic}}" alt="User Avatar" />
+              </div>
+              <div class="details">
+                <div class="name">{{ note.name }}</div>
+                <div class="email">{{ note.email }}</div>
+              </div>
+            </div>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </mat-tab>
+
+    <!-- MEMBERS Tab -->
+    <mat-tab label="MEMBERS">
+      <div class="tab-content">
+        <mat-list>
+          <mat-list-item *ngFor="let note of contacts | async" (click)="fnChat(note)" class="user-card">
+            <div class="user-info">
+              <div class="avatar">
+                <img [src]="note.profilePic || 'https://randomuser.me/api/portraits/men/1.jpg'" alt="User Avatar" />
+              </div>
+              <div class="details">
+                <div class="name">{{ note.name }}</div>
+                <div class="email">{{ note.email }}</div>
+              </div>
+            </div>
+            <div class="status" [ngClass]="{ 'online': note.isOnline, 'offline': !note.isOnline }"></div>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

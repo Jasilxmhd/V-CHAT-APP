@@ -1,0 +1,41 @@
+<div class="container">
+    <div>
+        <div class="registration-form border shadow p-3">
+            <p class="fs-5 fw-bold text-center">REGISTER</p>
+            <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" placeholder="Enter your name" />
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" type="email" placeholder="Enter your email" />
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" type="password" placeholder="Enter your password" />
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput formControlName="confirmPassword" type="password"
+                        placeholder="Confirm your password" />
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Gender</mat-label>
+                    <mat-select formControlName="gender">
+                        <mat-option value="male">Male</mat-option>
+                        <mat-option value="female">Female</mat-option>
+                        <mat-option value="other">Other</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <button mat-flat-button color="primary" type="submit">Register</button>
+            </form>
+        </div>
+
+    </div>
+</div>

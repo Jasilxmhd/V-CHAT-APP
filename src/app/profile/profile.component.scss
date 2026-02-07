@@ -1,0 +1,17 @@
+.profile-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  input[type="file"] {
+    margin-top: 20px;
+  }
+  

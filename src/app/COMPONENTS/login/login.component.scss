@@ -1,0 +1,126 @@
+// Global Styles
+$primary-color: #5f0eac;  // Primary color for buttons
+$secondary-color: #3E5879;  // Light background color
+$error-color: #dc3545;  // Error color for alert
+
+// Font Family
+$font-family: 'Arial', sans-serif;
+
+// Container Styles
+.container-fluid {
+  background-color: #213555;
+  height: 100vh; // Full screen height
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.full-screen {
+  min-height: 100vh;
+}
+
+.col-md-4 {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+// Header Styles
+.text-center {
+  text-align: center;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.fs-3 {
+  font-size: 1.75rem;
+}
+
+.fs-6 {
+  font-size: 0.875rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+// Form Fields Styles
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+
+  mat-label {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  mat-hint {
+    font-size: 0.8rem;
+    color: #6c757d;
+  }
+}
+
+// Error Message Styles
+.alert {
+  background-color: $error-color;
+  color: white;
+  font-size: 0.875rem;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+// Button Styles
+.btn-primary {
+  background-color: $primary-color;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  border: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// Link Styles
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Register Link Styles
+.p-2 {
+  margin-top: 10px;
+}
+
+.fw-bold {
+  font-weight: bold;
+}

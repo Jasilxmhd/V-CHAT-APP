@@ -1,0 +1,11 @@
+<div class="header">
+  <span>V-CHAT</span>
+  <span class="user-name">{{ userData?.name }}</span>
+  <mat-icon (click)="fnProfile()" class="fs-4 text-white m-2" style="height: 30px;margin-right: 20px!important;">account_circle</mat-icon>
+
+  <mat-icon class="logout-icon" (click)="fnSignOut()">logout</mat-icon>
+</div>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

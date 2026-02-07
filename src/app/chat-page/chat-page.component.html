@@ -1,0 +1,28 @@
+<div class="chat-container">
+    <div class="chat-header">
+        <div class="avatar">
+            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Avatar">
+          </div>
+      <span> {{state.name}}</span>
+    </div>
+  
+    <div class="chat-messages">
+      <!-- Messages -->
+      <div *ngFor="let msg of messages" class="message-bubble" 
+      [ngClass]="{
+        'my-message': msg.uid === user.uid, 
+        'other-message': msg.uid === state.uid
+      }">
+      <span class="message-text">{{ msg.message }}</span>
+    </div>
+    </div>
+  
+    <div class="chat-input">
+      
+      <mat-icon>camera_enhance</mat-icon>
+      <input type="text" [(ngModel)]="messageText" placeholder="Type a message..." />
+      <button mat-icon-button (click)="sendMessage()">
+        <mat-icon>send</mat-icon>
+      </button>
+    </div>
+  </div>
